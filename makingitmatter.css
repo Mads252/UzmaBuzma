@@ -1,0 +1,404 @@
+
+
+:root {
+    --bicyclette: "bicyclette", sans-serif;
+    --roc-grotesk: "roc-grotesk", sans-serif; 
+    --orange: #E1690F;
+    --beige: #FBF0D3;
+    --blaa: #103547;
+    
+}
+
+body{
+    background-color: var(--beige);
+}
+
+
+span h1 {
+    font-family: var(--bicyclette);
+    font-size: 5em;
+    color: var(--orange);
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 0%;
+    padding: 0%;
+}
+
+.cta{
+  background-color: var(--orange);
+  border-radius: 20px;
+  border: none;
+  color: var(--beige);
+  width: 150px;
+  height: 40px;
+  font-family: var(--bicyclette);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+span h4 {
+    font-family: var(--bicyclette-italic);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2em;
+    color: var(--orange);
+    text-align: center;
+    margin-top: -2vh;
+    margin-left: 240px;
+    padding: 0%;
+    
+}
+span h6 {
+    font-family: var(--roc-grotesk);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+}
+
+.aboutUzma{
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+}
+.aboutUzma1{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    color: var(--blaa);
+    margin-top: 10vh;
+}
+.aboutUzmaText{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blaa);
+    color: var(--beige);
+}
+
+.work li{
+    list-style-type: circle;
+}
+
+.BookingBTN{
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 20px;
+    color: white;
+}
+.omBTN{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+footer{
+    background-color: var(--blaa);
+    color: var(--beige);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+footer div{
+    display: flex;
+    gap: 10vw;
+}
+footer ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+.work-logos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  
+}
+.logo-carousel {
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    padding: 10px 0;
+  }
+  
+  .carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+  }
+  
+  .carousel-track img {
+    height: 80px;
+    margin: 0 40px;
+    object-fit: contain;
+    flex-shrink: 0; /* Sørg for at billeder ikke bliver mindre */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .info-slider-uzma {
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .uzma-slider-window {
+    overflow: hidden;
+    width: 100%;
+    
+    background: transparent;
+  }
+  
+  .uzma-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .uzma-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding-left: 20%;
+    padding-right: 20%;
+    color: var(--blaa);
+  }
+  .uzma-slide li{
+    list-style-type: circle;
+    font-family: var(--roc-grotesk);
+  }
+  .uzma-slide h2{
+    font-family: var(--bicyclette);
+  }
+  
+  .uzma-slider-btn {
+    
+    border: none;
+    padding: 10px 16px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background: transparent;
+  }
+  
+  .uzma-slider-btn:hover {
+    background-color: var(--blaa);
+    color: var(--beige);
+  }
+  
+
+  .scrollable-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  
+   
+  }
+  
+  .scrollable-row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+  
+  .scrollable-row::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollable-row div {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .scrollable-row img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Progress bar */
+  .progress-track {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    margin-top: 10px;
+    border-radius: 2px;
+    overflow: hidden;
+   
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background: white;
+    transition: width 0.2s ease;
+  }
+  
+  
+  
+
+  .bookingSection{
+    background-color: var(--orange);
+    color: var(--beige);
+    padding-top: 50px;
+    padding-bottom: 200px;
+  }
+  .bookingSection div{
+    display: flex;
+    gap: 10vw;
+    justify-content: space-around;
+
+  }
+  .bookingSection span, form{
+    width: 50%;
+    
+  }
+  form button{
+    font-family: var(--bicyclette);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--orange);
+    background-color: var(--beige);
+    border-radius: 20px;
+    border: none;
+    margin-top: 14px;
+    width: 100%;
+    height: 40px;
+  }
+  form h4{
+    font-family: var(--bicyclette);
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 35px;
+    margin-bottom: -10px;
+    
+  }
+  input {
+    width: 100%;
+    height: 50px;
+    font-family: var(--bicyclette);
+    font-weight: 400;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid var(--beige);
+    color: var(--beige);
+  }
+  
+  input::placeholder {
+    font-family: var(--bicyclette);
+    font-weight: 300;
+    color: var(--beige);
+    opacity: 0.5; /* halv gennemsigtighed */
+  }
+  input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .bookingSection h3{
+    font-family: var(--bicyclette);
+    font-weight: 300;
+    font-size: 15px;
+  }
+  .scrollable-row.dragging {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+  }
+  .aboutMakingItMatter{
+    background-color: var(--blaa);
+    color: var(--beige);
+   padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
+  .dataSlider{
+background-color: var(--blaa);
+color: var(--beige);
+  }
+
+
+  .aboutMakingItMatterflex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .aboutMakingItMatterflex div{
+    width: 45%;
+  }
+  .aboutMakingItMatterflex li{
+    margin-bottom: 40px;
+  }
+
+
+  .social-media-booking{
+    display: flex;
+    text-align: left;
+    list-style: none;
+    gap: 10px;
+  }
+
+  .section-border-scroll {
+    overflow: hidden;
+    width: 100%;
+    height: 200px; /* justér højden efter dit billede */
+    position: relative;
+    margin-bottom: -10px;
+  }
+  
+  .border-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-border 130s linear infinite;
+  }
+  
+  .border-track img {
+    height: 100%;
+    margin-right: 0; /* ingen spacing imellem hvis det skal virke som ét bånd */
+  }
+    
+  @keyframes scroll-border {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .costumerSlider{
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+  }
+
+  
