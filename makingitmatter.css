@@ -370,6 +370,7 @@ color: var(--beige);
 
   .section-border-scroll {
     overflow: hidden;
+   
     width: 100%;
     height: 200px; /* justér højden efter dit billede */
     position: relative;
