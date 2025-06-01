@@ -1,0 +1,818 @@
+header{
+  background-image: url('/UzmaBuzma/etNytVi/images/etnytvihero.svg');
+}
+body{
+    font-family: var(--bicyclette);
+    background-color: var(--beige);
+}
+h1{
+  color: var(--red);
+  font-size: 6em;
+  font-weight: 800;
+  margin: 0;
+  margin-top: 12%;
+}
+.BookingBTN{
+    background-color: transparent;
+    border-style: solid;
+    border-color: var(--beige);
+    border-width: 1px;
+    border-radius: 20px;
+    color: var(--beige);
+    width: 150px;
+    font-size: 20px;
+    font-family: var(--roc-grotesk);
+    font-weight: 600;
+    cursor: pointer;
+}
+.BookingBTN:hover{
+  background-color: var(--beige);
+  color: var(--yellow);
+  
+}
+.social-media-booking{
+    display: flex;
+    text-align: left;
+    list-style: none;
+    gap: 10px;
+  }
+.omBTN{
+    background-color: transparent;
+    color: var(--beige);
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+ .section-border-scroll {
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    margin-bottom: -10px;
+    margin-top: -150px;
+  }
+  
+  .border-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-border 60s linear infinite;
+  }
+  
+  .border-track img {
+    height: 100%;
+    margin-right: 0; 
+  }
+    
+  @keyframes scroll-border {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+#aboutUzma{
+  background-image: url('/UzmaBuzma/uzma/images/aboutuzmabackground.svg');
+}
+#lectures{
+  background-image: url('/UzmaBuzma/uzma/images/lecturesBG2.svg');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.frame-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.h11{
+    margin-top: 15%;
+    margin-right: 25%;
+}
+.h12{
+    margin-top: -7%;
+    margin-left: 25%;
+}
+
+
+
+.nav__toggle, .navClose{
+
+  color: var(--red);
+}
+
+
+  .bookingSection{
+    background-color: var(--blue);
+    color: var(--red);
+    padding-top: 50px;
+    padding-bottom: 200px;
+  }
+  .bookingSection div{
+    display: flex;
+    gap: 10vw;
+    justify-content: space-around;
+
+  }
+  .bookingSection span, form{
+    width: 50%;
+    
+  }
+  .bookingSection h3{
+    font-family: var(--bicyclette);
+    font-weight: 300;
+    font-size: 15px;
+  }
+  form button{
+    font-family: var(--bicyclette);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--blue);
+    background-color: var(--beige);
+    border-radius: 20px;
+    border: none;
+    margin-top: 14px;
+    width: 100%;
+    height: 40px;
+  }
+  form h4{
+    font-family: var(--bicyclette);
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 35px;
+    margin-bottom: -10px;
+    
+  }
+  input {
+    width: 100%;
+    height: 50px;
+    font-family: var(--bicyclette);
+    font-weight: 400;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid var(--beige);
+    color: var(--beige);
+  }
+  
+  input::placeholder {
+    font-family: var(--bicyclette);
+    font-weight: 300;
+    color: black;
+    opacity: 0.5; /* halv gennemsigtighed */
+  }
+  input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+   @media (max-width: 630px) {
+    span h1 {
+      font-size: 3em;
+    }
+    
+    span h6 {
+      font-size: 0.8em;
+    }
+  
+  .ul1 li{
+    font-size: 12px;
+  }
+.aboutUzma1{
+  flex-wrap: wrap;
+}
+.aboutMakingItMatterflex{
+  flex-direction: column;
+}
+.aboutMakingItMatterflex div{
+  width: 100%;
+}
+
+.bookingSection div{
+  flex-direction: column;
+  align-items: center;
+}
+  .bookingSection span, form{
+    width: 100%;
+  }
+  .bookingSection div{
+    gap: 0;
+  }
+  .bookingSection h3{
+    font-size: 12px;
+  }
+}
+
+footer{
+    background-color: #001A27;
+    color: #B18865;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url('/UzmaBuzma/uzma/images/footerbg.svg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+footer div{
+    display: flex;
+    gap: 10vw;
+}
+footer ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+
+    
+}
+
+
+
+.cta1{
+    border-radius: 20px;
+    background: transparent;
+    border: #FBF0D3 solid 2px;
+    color: #FBF0D3;
+    font-size: 16px;
+    width: 130px;
+    height: 30px;
+}
+.cta2{
+
+     border-radius: 20px;
+    background: #FBF0D3;
+    border: #FBF0D3 solid 1px;
+    color: var(--purple);
+    font-size: 16px;
+    width: 130px;
+    height: 30px;
+}
+
+
+ .aboutMakingItMatter{
+    background-color: var(--beige);
+    color: var(--blue);
+   padding-top: 10vh;
+    padding-bottom: 10vh;
+    flex-wrap: nowrap;
+  }
+
+
+
+  .aboutMakingItMatterflex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .aboutMakingItMatterflex div{
+    width: 45%;
+  }
+  .aboutMakingItMatterflex li{
+    margin-bottom: 40px;
+  }
+.smart-carousel {
+  margin-top: 45px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 2rem;
+  cursor: grab;
+ 
+ 
+}
+
+.smart-carousel.focus-mode .carousel-item:not(.active) {
+  flex: 0 0 80px;       /* Gør kortene smalle */
+  opacity: 0.4;
+  transform: scale(0.95);
+  pointer-events: none; /* Deaktiver klik på inaktive */
+}
+
+.carousel-item.active {
+  flex: 0 0 400px;     /* Gør den aktive bredere */
+  transform: scale(1.05);
+  z-index: 2;
+  opacity: 1;
+  
+}
+/* Når det er aktivt (klikket) */
+.carousel-item.active .card-default {
+  display: none;
+}
+.carousel-item.active .card-active {
+  display: block;
+}
+
+.carousel-item {
+  flex: 0 0 20%;
+  height: 80vh;            /* Skalerer med skærmens højde */
+  min-height: 280px;       /* Minimum – aldrig mindre end dette */
+  max-height: 420px;       /* Maksimum – undgå kæmpe kort på store skærme */
+  border-radius: 16px;
+  scroll-snap-align: center;
+  transition: all 0.4s ease;
+  transform-origin: center;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--bicyclette, sans-serif);
+  font-size: 20px;
+  cursor: pointer;
+}
+.carousel-item img {
+  
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+.card-default {
+  display: block;
+}
+.card-active {
+  display: none;
+}
+
+
+  #interventioner{
+      background-image: url('/UzmaBuzma/etNytVi/images/interventionerBG.svg');
+    background-size: cover;
+    padding-top: 2%;
+    padding-bottom: 15%;
+  }
+
+   #interventioner h2{
+    color: var(--red);
+    font-size: 2em;
+    font-weight: 800;
+    margin: 0;
+    margin-top: 20%;
+   }
+
+
+    .dataSlider{
+
+
+  }
+
+  .scrollable-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  
+   
+  }
+
+  .scrollable-row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+  
+  .scrollable-row::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollable-row div {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin: 5px;
+    margin-right: -100px ;
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .scrollable-row img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+
+  #aboutItAll h2{
+    color: var(--red);
+    font-size: 2em;
+    font-weight: 800;
+    margin: 0;
+    margin-top: 20%;
+   }
+  
+   #aboutItAll{
+    padding-bottom: 16%;
+   }
+   .aboutItAll-text{
+
+    padding-top: 100px;
+    font-weight: 100;
+    font-size: 20px;
+   }
+
+   @media (max-width: 1024px) {
+  .navMenu{
+          background-color: rgba(129, 205, 229, 0.8);
+}
+  }
+
+  
+
+   @media (max-width: 630px) {
+  .aboutMakingItMatterflex div {
+    width: 100%;
+}
+
+.header-text h4{
+  font-size: 12px;
+}
+
+  }
+
+
+  @media (max-width: 800px){
+#lectures {
+  background-image: url('/UzmaBuzma/uzma/images/lecturesBG12.svg');
+      
+  
+}}
+@media (max-width: 600px){
+#lectures {
+  background-image: url('/UzmaBuzma/uzma/images/lecturesBG33.svg');
+      height: clamp(40vh, 133.9vw, 300vh);
+  
+}}
+@media (max-width: 460px){
+.lectuSpan{
+  font-size: 14px;
+  margin-top: -70px;
+  
+}}
+@media (max-width: 400px){
+  #lectures {
+  background-image: url('/UzmaBuzma/uzma/images/lecturesBG44.svg');
+  height: clamp(40vh, 160.9vw, 300vh);
+}
+}
+
+
+@media (max-width: 1024px) {
+  .navMenu{
+          background-color: rgba(150, 134, 170, 0.8);
+}
+  .h2Hero{
+  margin-top: 0px;
+}
+.smart-carousel {
+  margin-top: 0px;
+  
+ 
+ 
+}
+  .carousel-item {
+    flex: 0 0 30%;
+    
+    height: 55vh;
+  }
+}
+@media (max-width: 900px) {
+  .carousel-item {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 25vh;
+  }
+   .BookingBTN{
+    
+    width: 100px;
+    font-size: 16px;
+    
+}
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    height: 25vh;
+  }
+}
+@media (max-width: 1117px) {
+  .aboutUzmaSpan{
+font-size: 20px;
+  }
+  .h2Ultra{
+    font-size: 30px;
+  }
+  .h2Str{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 920px) {
+  .aboutUzmaSpan{
+font-size: 16px;
+  }
+  .h2Ultra{
+    font-size: 24px;
+  }
+}
+@media (max-width: 763px) {
+  .aboutUzmaSpan{
+font-size: 12px;
+  }
+  .h2Ultra{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 632px) {
+  .aboutUzmaSpan{
+font-size: 8px;
+  }
+  .h2Ultra{
+    font-size: 12px;
+  }
+  .aboutUzma1 img {
+    width: 40%;
+  }
+  
+}
+
+@media (max-width: 540px) {
+  .aboutUzmaSpan{
+font-size: 8px;
+  }
+  .h2Ultra{
+    font-size: 12px;
+  }
+  .aboutUzma1 img {
+    width: 40%;
+  }
+  .bodypadding3 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.mg{
+  margin-top: 0%;
+  
+}
+}
+
+@media (max-width: 460px) {
+  .aboutUzmaSpan{
+font-size: 8px;
+ line-height: 10px;
+  }
+  .h2Hejs{
+    font-size: 9px;
+  }
+  .h2Ultra{
+    font-size: 9px;
+  }
+  .aboutUzma1 img {
+    width: 40%;
+  }
+  .carousel-item img {
+    max-height: 70%;
+    object-fit: contain;
+}
+ 
+.mg{
+  margin-top: 0%;
+  
+}
+
+.header-text h4{
+  font-size: 12px;
+}
+}
+@media (max-width: 400px) {
+  .h2Hejs{
+    margin-bottom: 0;
+  }
+  .h2Ultra{
+    margin-bottom: 0;
+  }
+  .aboutUzma1 img {
+    width: 50%;
+  }
+  .aboutUzma1{
+    padding-top: 2%;
+  }
+  .aboutUzmaSpan{
+
+ line-height: -20px;
+  }
+ 
+}
+
+@media (min-width: 1024px) {
+.h12{
+    margin-top: -4%;
+
+    margin-left: 15%;
+  }
+
+  .h2Str{
+    font-size: 40px;
+  }
+  .arrows{
+    font-size: 40px;
+  }
+}
+  
+
+
+@media (min-width: 1300px) {
+
+  
+  .lectuSpan{
+    font-size: 23px;
+    padding-top: 0;
+  }
+  
+}
+@media (min-width: 1500px) {
+  .h11 {
+    margin-top: 15%;
+    margin-right: 10%;
+}
+.h12{
+    margin-top: -1%;
+
+    margin-left: 5%;
+  }
+  .h2Hero{
+    padding-top: 10%;
+  }
+  /* .bodypadding2{
+    padding-top: 10%;
+  } */
+.h2Str{
+    font-size: 50px;
+  }
+  .lectuSpan{
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 1700px) {
+ .h2Hero{
+    padding-top: 15%;
+  }
+  /* .bodypadding2{
+    padding-top: 13%;
+  }
+   */
+
+}
+
+@media (min-width: 2200px) {
+ 
+  /* .bodypadding2{
+    padding-top: 20%;
+  }
+   */
+
+}
+
+@media (min-width: 2400px) {
+ 
+  /* .bodypadding2{
+    padding-top: 25%;
+  }
+   */
+
+}
+
+@media (min-width: 1024px) {
+.h12{
+    margin-top: -4%;
+
+    margin-left: 15%;
+  }
+  header {
+    height: 100vh; /* Gør headeren høj nok til at fylde skærmen */
+  }
+ .section-border-scroll{
+      margin-top: -150px
+ }
+
+}
+  
+@media (min-width: 1500px) {
+  .h11 {
+    margin-top: 15%;
+    margin-right: 10%;
+}
+.h12{
+    margin-top: -1%;
+
+    margin-left: 5%;
+  }
+  /* .bodypadding2{
+    padding-top: 10%;
+  } */
+  
+ header {
+    height: 100vh; 
+  }
+
+}
+
+@media (min-width: 1300px) {
+
+ 
+
+}
+
+@media (min-width: 1700px) {
+ 
+  /* .bodypadding2{
+    padding-top: 13%;
+  } */
+  
+
+}
+
+@media (min-width: 2200px) {
+ 
+  /* .bodypadding2{
+    padding-top: 20%;
+  }
+   */
+
+}
+
+@media (min-width: 2400px) {
+ 
+  /* .bodypadding2{
+    padding-top: 25%;
+  }
+   */
+
+}
+@media (max-width: 2561px) {
+ 
+  #lectures {
+    margin-top: -600px;
+  }
+  
+
+}
+
+@media (max-width: 2288px) {
+ 
+  #lectures {
+    margin-top: -500px;
+  }
+
+}
+
+@media (max-width: 1892px) {
+ 
+  #lectures {
+    margin-top: -400px;
+  }
+
+}
+
+@media (max-width: 1500px) {
+ 
+  #lectures {
+    margin-top: -300px;
+  }
+ 
+
+}
+
+@media (max-width: 1024px) {
+  
+  #lectures {
+    margin-top: -200px;
+  }
+
+}
+@media (max-width: 800px) {
+ 
+  #lectures {
+    margin-top: 0px;
+  }
+  
+
+}
+@media (min-width: 800px) {
+ .nav1 {
+     height: 8%; 
+}
+  
+  .marginos{
+    margin-top: -30%;
+  }
+
+}

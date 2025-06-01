@@ -72,9 +72,10 @@ let scrollLeft;
 
 slider.addEventListener('mousedown', (e) => {
   isDown = true;
-  slider.classList.add('dragging');
-  startX = e.pageX - slider.offsetLeft;
+  startX = e.pageX;
   scrollLeft = slider.scrollLeft;
+  slider.classList.add('dragging');
+  e.preventDefault();
 });
 
 slider.addEventListener('mouseleave', () => {
@@ -89,18 +90,67 @@ slider.addEventListener('mouseup', () => {
 
 slider.addEventListener('mousemove', (e) => {
   if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 1.5; // speed factor
+  const x = e.pageX;
+  const walk = (x - startX) * 1.2; // speed
   slider.scrollLeft = scrollLeft - walk;
 });
+// Hent og byg kundekort fra SheetBest
+fetch('https://api.sheetbest.com/sheets/c7e30d95-3a33-450c-83cb-e697f0af7c5f')
+  .then(response => response.json())
+  .then(data => {
+    const cardContainer = document.getElementById("quoteSliderTrack");
+    data.forEach(entry => {
+      const card = document.createElement("div");
+      card.className = "quote-card";
+      card.innerHTML = `
+        <img src="${entry['Billed-URL']}" alt="Billede af ${entry.Titel}" class="quote-avatar">
+        <div class="quote-name">${entry.Titel}</div>
+        <div class="quote-role">${entry.Billedtekst}</div>
+        <div class="quote-message">${entry.Tekst || ''}</div>
+      `;
+      cardContainer.appendChild(card);
+    });
+  });
 
+// Drag-funktion til kundeslider
+const dragTarget = document.querySelector('.slider-wrapper');
+let isDragging = false;
+let dragStartX;
+let scrollStartX;
 
+dragTarget.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  dragTarget.classList.add('dragging');
+  dragStartX = e.pageX - dragTarget.offsetLeft;
+  scrollStartX = dragTarget.scrollLeft;
+});
 
+dragTarget.addEventListener('mouseleave', () => {
+  isDragging = false;
+  dragTarget.classList.remove('dragging');
+});
 
+dragTarget.addEventListener('mouseup', () => {
+  isDragging = false;
+  dragTarget.classList.remove('dragging');
+});
 
+dragTarget.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX - dragTarget.offsetLeft;
+  const walk = (x - dragStartX) * 1.5;
+  dragTarget.scrollLeft = scrollStartX - walk;
+});
 
+// Touch support
+dragTarget.addEventListener('touchstart', (e) => {
+  dragStartX = e.touches[0].pageX - dragTarget.offsetLeft;
+  scrollStartX = dragTarget.scrollLeft;
+});
 
-
-
-
+dragTarget.addEventListener('touchmove', (e) => {
+  const x = e.touches[0].pageX - dragTarget.offsetLeft;
+  const walk = (x - dragStartX) * 1.5;
+  dragTarget.scrollLeft = scrollStartX - walk;
+});

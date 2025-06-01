@@ -3,7 +3,7 @@
 :root {
     --bicyclette: "bicyclette", sans-serif;
     --roc-grotesk: "roc-grotesk", sans-serif; 
-    --orange: #E1690F;
+    --orange: #ed5c02;
     --beige: #FBF0D3;
     --blaa: #103547;
     
@@ -25,7 +25,11 @@ span h1 {
     margin-bottom: 0%;
     padding: 0%;
 }
+.ctaDril{
+width: 150px;
 
+
+}
 .cta{
   background-color: var(--orange);
   border-radius: 20px;
@@ -36,10 +40,12 @@ span h1 {
   font-family: var(--bicyclette);
   font-weight: 500;
   font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 span h4 {
-    font-family: var(--bicyclette-italic);
+    font-family: var(--bicyclette);
     font-style: italic;
     font-weight: 400;
     font-size: 2em;
@@ -95,21 +101,34 @@ span h6 {
 .BookingBTN{
     background-color: transparent;
     border-style: solid;
-    border-color: white;
+    border-color: var(--beige);
     border-width: 1px;
     border-radius: 20px;
-    color: white;
+    color: var(--beige);
+    width: 150px;
+    font-size: 20px;
+    font-family: var(--roc-grotesk);
+    font-weight: 600;
+    cursor: pointer;
 }
+.BookingBTN:hover{
+  background-color: var(--beige);
+  color: var(--orange);
+  
+}
+
 .omBTN{
     background-color: transparent;
-    color: white;
+    color: var(--beige);
     border: none;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 footer{
     background-color: var(--blaa);
     color: var(--beige);
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 50px;
 }
 footer div{
@@ -119,7 +138,7 @@ footer div{
 footer ul{
     display: flex;
     flex-direction: column;
-    gap: 5vw;
+    gap: 2vw;
 }
 
 .work-logos{
@@ -127,6 +146,9 @@ footer ul{
     display: flex;
     justify-content: space-around;
   
+}
+.work-logos li{
+  width: 200px;
 }
 .logo-carousel {
     width: 100%;
@@ -152,6 +174,7 @@ footer ul{
     object-fit: contain;
     flex-shrink: 0; /* Sørg for at billeder ikke bliver mindre */
   }
+  
   
   @keyframes scroll {
     0% {
@@ -200,9 +223,9 @@ footer ul{
   .uzma-slider-btn {
     
     border: none;
-    padding: 10px 16px;
-    border-radius: 50%;
+    padding: 14px 16px;
     font-size: 18px;
+    border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s;
     background: transparent;
@@ -211,14 +234,20 @@ footer ul{
   .uzma-slider-btn:hover {
     background-color: var(--blaa);
     color: var(--beige);
+    border-radius: 50%;
   }
-  
+  .costumerSlider h2{
+    font-family: var(--bicyclette);
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
 
   .scrollable-container {
     width: 100%;
     margin: 0 auto;
     position: relative;
-  
+   
    
   }
   
@@ -251,6 +280,60 @@ footer ul{
     border-radius: 8px;
   }
   
+
+  /* kunde sldieerrrrrr */
+  .slider-wrapper {
+      overflow-x: auto;
+      padding: 20px;
+      margin-bottom: 10%;
+    }
+
+    .slider-track {
+      display: flex;
+      gap: 24px;
+    }
+
+    .quote-card {
+      background-color: #083344;
+      color: var(--beige);
+      border-radius: 20px;
+      padding: 24px;
+      min-width: 220px;
+      max-width: 280px;
+      text-align: left;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-family: var(--roc-grotesk);
+    }
+
+    .quote-avatar {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      margin-bottom: 16px;
+    }
+
+    .quote-name {
+      font-weight: 700;
+      font-size: 1.1em;
+      margin-bottom: 4px;
+    }
+
+    .quote-role {
+      font-size: 0.9em;
+      color: #cbd5e1;
+      margin-bottom: 12px;
+    }
+
+    .quote-message {
+      font-size: 0.95em;
+      line-height: 1.4;
+      color: #e2e8f0;
+    }
   /* Progress bar */
   .progress-track {
     height: 4px;
@@ -258,6 +341,8 @@ footer ul{
     margin-top: 10px;
     border-radius: 2px;
     overflow: hidden;
+    margin-left:10%;
+    margin-right: 10%;
    
   }
   
@@ -270,11 +355,13 @@ footer ul{
   
   
   
-
+.ctakunde{
+      margin: 0 auto;
+}
   .bookingSection{
     background-color: var(--orange);
     color: var(--beige);
-    padding-top: 50px;
+   
     padding-bottom: 200px;
   }
   .bookingSection div{
@@ -302,7 +389,7 @@ footer ul{
   form h4{
     font-family: var(--bicyclette);
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 35px;
     margin-bottom: -10px;
     
@@ -364,6 +451,9 @@ color: var(--beige);
     margin-bottom: 40px;
   }
 
+  .uzmaaboutimg{
+    width: 45%;
+  }
 
   .social-media-booking{
     display: flex;
@@ -375,7 +465,7 @@ color: var(--beige);
   .section-border-scroll {
     overflow: hidden;
     width: 100%;
-    height: 150px; /* justér højden efter dit billede */
+    height: 150px;
     position: relative;
     margin-bottom: -10px;
     margin-top: -150px;
@@ -389,7 +479,7 @@ color: var(--beige);
   
   .border-track img {
     height: 100%;
-    margin-right: 0; /* ingen spacing imellem hvis det skal virke som ét bånd */
+    margin-right: 0; 
   }
     
   @keyframes scroll-border {
@@ -402,23 +492,34 @@ color: var(--beige);
   }
 
   .costumerSlider{
-    margin-top: 30vh;
     margin-bottom: 30vh;
+    
+    display: flex;
+    flex-direction: column;
   }
+  .costumerSlider p{
+    font-family: var(--roc-grotesk);
+    font-weight: 400;
+    font-size: 18px;
+    
+  }
+  
 
   @media (max-width: 630px) {
     span h1 {
       font-size: 3em;
     }
     span h4 {
+      margin-top: 5px;
       font-size: 1.5em;
+      margin-left: 0px;
     }
     span h6 {
       font-size: 0.8em;
     }
   
   .ul1 li{
-    font-size: 12px;
+    font-size: 20px;
   }
 .aboutUzma1{
   flex-wrap: wrap;
@@ -443,4 +544,153 @@ color: var(--beige);
   .bookingSection h3{
     font-size: 12px;
   }
+  
+}
+
+
+@media (max-width: 768px) {
+
+  .BookingBTN{
+    
+    width: 100px;
+    font-size: 16px;
+    
+}
+  .costumerSlider h2{
+    
+    
+    font-size: 24px;
+  
+  }
+  .costumerSlider p{
+    font-family: var(--roc-grotesk);
+    font-weight: 400;
+    font-size: 16px;
+    
+  }
+
+  .uzmaaboutimg{
+    width: 60%;
+  }
+  
+  .scrollable-row img{
+    width: 40%;
+  }
+.scrollable-row div{
+      margin-right: -300px;
+      justify-content: flex-start;
+
+    
+}
+  .uzma-slide {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  .uzma-slide ul{
+    font-size: 12px;
+  }
+  .fullslider{
+    padding: 0;
+  }
+  .aboutUzma1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutUzmaText {
+    order: 2;
+  }
+.aboutUzmaText  .cta {
+    display: block;
+    margin: 2rem auto 0 auto; 
+    text-align: center;
+  }
+  .aboutUzmaImage {
+
+    order: 1;
+    width: 100%;
+    max-width: 400px;
+  }
+  .work-logos{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .work h2{
+    font-size: 20px;
+        padding-bottom: 2%;
+  }
+
+  
+}
+  
+.aboutMakingItMatterflex {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.aboutMakingItMatter-text,
+.aboutMakingItMatter-video {
+  flex: 1 1 50%;
+}
+
+.cta-wrapper {
+  margin-top: 2rem;
+  text-align: left; 
+}
+
+
+
+
+@media (max-width: 768px) {
+  .aboutMakingItMatterflex {
+    flex-direction: column;
+  }
+
+  .cta-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .cta {
+    
+    margin: 0 auto;
+  }
+  .ctaDril{
+   margin-left: 25%;
+  }
+}
+
+@media (max-width: 425px) {
+  .work ul{
+    padding-left: 5%;
+    padding-right: 5%;
+  }}
+
+  @media (min-width: 1200px) {
+ .uzma-slide ul {
+  padding-left: 20%;
+   
+ }
+}
+ @media (min-width: 1600px) {
+ .uzma-slide ul {
+  padding-left: 25%;
+   
+ }
+}
+
+
+@media (min-width: 2500px) {
+ .uzma-slide ul {
+  padding-left: 30%;
+   
+ }
+}
+
+@media (max-width: 630px) {
+    .ul1 li {
+        font-size: 12px;
+    }
 }

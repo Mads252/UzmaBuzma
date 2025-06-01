@@ -4,94 +4,89 @@
     --orange: #E1690F;
     --beige: #FBF0D3;
     --blaa: #103547;
-    
+    --purple: #9686AA;
+    --red: #C04639;
+    --blue: #81CDE5;
+    --yellow: #EFD407;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-.bodypadding{
+
+img{
+  pointer-events: none;
+  user-select: none;
+}
+
+.bodypadding {
     padding-left: 10%;
     padding-right: 10%;
 }
 
-ul{
+.bodypadding2 {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-   
-   
 }
-a{
+
+a {
     text-decoration: none;
     color: #000;
 }
 
-header{
-    background-image: url('makingItMatterHeroTEST.png');
+header {
     background-size: cover;
     background-color: #f2f2f2;
     height: 80vh;
     text-align: center;
 }
 
-
-.nav1{
-    
+.nav1 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
     height: 10%;
-    
-}
-.nav1 ul{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-   
+    position: relative;
 }
 
-.ul1{
-    
+
+
+.ul1 {
     justify-content: flex-start;
     align-items: center;
     font-family: var(--bicyclette);
     font-weight: 800;
 }
 
-.ul1 li{
+.ul1 li {
     width: 10vw;
     height: 100%;
     font-size: 20px;
     text-align: center;
-
 }
-.ul1 li a{
-   align-items: center;
+
+.ul1 li a {
+    align-items: center;
     justify-content: center;
     display: flex;
     height: 100%;
     width: 100%;
- 
-  
-}
-.ul2{
-    justify-content: flex-end;
-    align-items: center;
-    gap: 5%;
-    margin-right: 2%;
-    
 }
 
-
-
-.ul1 li:nth-child(1) a{
+.ul1 li:nth-child(1) a {
     background-color: #977bb7;
     color: #efd407;
 }
@@ -101,8 +96,137 @@ header{
     color: var(--orange);
 }
 
-.ul1 li:nth-child(3) a{
+.ul1 li:nth-child(3) a {
     background-color: #81CDE5;
-    color: #D51900;
+    color: var(--red);
+}
+
+
+
+.ul2 {
+
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5%;
+    margin-right: 20px;
+    display: flex;
+    font-size: 30px;
+}
+
+
+.nav__toggle,
+.navClose {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.navMenu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+footer li{
+    font-family: var(--bicyclette);
+}
+
+/* ---------- RESPONSIV STYLING ---------- */
+@media screen and (max-width: 1023px) {
+    .nav__toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    z-index: 1001;
+}
+.ul1 li{
+    width: 25vw;
+}
+
+    .navMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: rgba(16, 53, 71, 0.8); /* Gennemsigtig hvid */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 25%;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: flex-start;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+
+    .navMenu.show-menu {
+        right: 0;
+    }
+
+    .ul2 {
+        flex-direction: column;
+        gap: 2rem;
+        
+        justify-content: flex-start;
+    }
+    
+
+  .navClose {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    z-index: 1002; /* højere end nav__toggle og navMenu */
+}
+.bookingImg{
+    width: 50%;
+    
+}
+
+}
+
+.navMenu.show-menu ~ .nav__toggle {
+    display: none;
+}
+
+.ul1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+footer h4{
+    font-family: var(--bicyclette);
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--orange);
+    text-align: center;
+    margin-bottom: 0;
+}
+footer h2{
+    font-size: 40px;
+}
+@media screen and (max-width: 600px) {
+.bookingImg{
+    margin-left: 150px;
+    margin-top: -50px;
+
+}
+
+footer h4{
+    font-family: var(--bicyclette);
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--orange);
+    text-align: center;
+}
+footer h2{
+    font-size: 30px;
+}
 }
 
